@@ -1,11 +1,13 @@
 <html>
-    <head>
-        <title>seg16 html5 demo</title>
-    </head>
-    <body>
-        <svg id="svgRoot" xmlns="http://www.w3.org/2000/svg" version="1.1" width="600" height="400">
-            <g id="seg1" transform="translate(-150,0)">
-                <!-- draw axis
+
+<head>
+    <title>seg16 html5 demo</title>
+</head>
+
+<body>
+    <svg id="svgRoot" xmlns="http://www.w3.org/2000/svg" version="1.1" width="600" height="400">
+        <g id="seg1" transform="translate(-150,0)">
+            <!-- draw axis
                 <line x1="-300" y1="0" x2="300" y2="0" transform="translate(300,200)" fill="none" stroke="blue" stroke-dasharray="5,5"/>
                 <line x1="0" y1="-200" x2="0" y2="200" transform="translate(300,200)" fill="none" stroke="blue" stroke-dasharray="5,5"/>
                 <text x="0" y="200" fill="red" transform="translate(300,200)">(0,200)</text>
@@ -13,67 +15,116 @@
                 <text x="-300" y="0" fill="red" transform="translate(300,200)" >(-300,0)</text>
                 <text x="300" y="0" fill="red" transform="translate(300,200)"  text-anchor="end">(300,0)</text>
                 draw axis end-->
-                <!-- draw seg 16 start-->
-                <path led= 'A' d="M0 0 L10 10 L50  10 L60  0 L50  -10 L10 -10 L0 0 Z" transform="translate(300,80)rotate(180)" fill="none" stroke="gray" stroke-width="3" /><!-- A led-->
-                <path led= 'B' d="M0 0 L10 10 L50  10 L60  0 L50  -10 L10 -10 L0 0 Z" transform="translate(300,80)" fill="none" stroke="gray" stroke-width="3" /><!-- B led-->
-                <path led= 'C' d="M0 0 L10 10 L110 10 L120 0 L110 -10 L10 -10 L0 0 Z" transform="translate(300,80)rotate(90)translate(0,-60)" fill="none" stroke="gray" stroke-width="3" /><!-- C led-->
-                <path led= 'D' d="M0 0 L10 10 L110 10 L120 0 L110 -10 L10 -10 L0 0 Z" transform="translate(300,200)rotate(90)translate(0,-60)" fill="none" stroke="gray" stroke-width="3" /><!-- D led-->
-                <path led= 'E' d="M0 0 L10 10 L50  10 L60  0 L50  -10 L10 -10 L0 0 Z" transform="translate(300,320)" fill="none" stroke="gray" stroke-width="3" /><!-- E led-->
-                <path led= 'F' d="M0 0 L10 10 L50  10 L60  0 L50  -10 L10 -10 L0 0 Z" transform="translate(300,320)rotate(180)" fill="none" stroke="gray" stroke-width="3" /><!-- F led-->
-                <path led= 'G' d="M0 0 L10 10 L110 10 L120 0 L110 -10 L10 -10 L0 0 Z" transform="translate(300,200)rotate(90)translate(0,60)" fill="none" stroke="gray" stroke-width="3" /><!-- G led-->
-                <path led= 'H' d="M0 0 L10 10 L110 10 L120 0 L110 -10 L10 -10 L0 0 Z" transform="translate(300,80)rotate(90)translate(0,60)" fill="none" stroke="gray" stroke-width="3" /><!-- H led-->
-                <path led= 'K' d="M0 0 L20 10 L70 10 L90 0 L70 -10 L20 -10 L0 0 Z"    transform="translate(285,185)rotate(180)rotate(70)" fill="none" stroke="gray" stroke-width="3" /><!-- K led-->
-                <path led= 'M' d="M0 0 L10 10 L110 10 L120 0 L110 -10 L10 -10 L0 0 Z" transform="translate(300,200)rotate(-90)" fill="none" stroke="gray" stroke-width="3" /><!-- M led-->
-                <path led= 'N' d="M0 0 L20 10 L70 10 L90 0 L70 -10 L20 -10 L0 0 Z"    transform="translate(315,185)rotate(-70)" fill="none" stroke="gray" stroke-width="3" /><!-- N led-->
-                <path led= 'P' d="M0 0 L10 10 L50  10 L60  0 L50  -10 L10 -10 L0 0 Z" transform="translate(300,200)" fill="none" stroke="gray" stroke-width="3" /><!-- P led-->
-                <path led= 'R' d="M0 0 L20 10 L70 10 L90 0 L70 -10 L20 -10 L0 0 Z"    transform="translate(315,215)rotate(70)" fill="none" stroke="gray" stroke-width="3" /><!-- R led-->
-                <path led= 'S' d="M0 0 L10 10 L110 10 L120 0 L110 -10 L10 -10 L0 0 Z" transform="translate(300,200)rotate(90)" fill="none" stroke="gray" stroke-width="3" /><!-- S led-->
-                <path led= 'T' d="M0 0 L20 10 L70 10 L90 0 L70 -10 L20 -10 L0 0 Z"    transform="translate(285,215)rotate(180)rotate(-70)" fill="none" stroke="gray" stroke-width="3" /><!-- T led-->
-                <path led= 'U' d="M0 0 L10 10 L50  10 L60  0 L50  -10 L10 -10 L0 0 Z" transform="translate(300,200)rotate(180)" fill="none" stroke="gray" stroke-width="3" /><!-- U led-->           
-                <!-- draw seg 16 end-->
-                <rect x="-100" y="-180" width="200" height="360" fill="none" stroke="black" transform="translate(300,200)" /><!-- wireframe-->
-                <line x1="-100" y1="-150" x2="-120" y2="-150" stroke="black" transform="translate(300,200)"></line> <!-- wire "A" -->
-                <text x="0" y="0" fill="black" transform="translate(300,200)translate(-100,-150)"  text-anchor="start" dominant-baseline="middle">A</text>
-                <line x1="-100" y1="-130" x2="-120" y2="-130" stroke="black" transform="translate(300,200)"></line> <!-- wire "B" -->
-                <text x="0" y="0" fill="black" transform="translate(300,200)translate(-100,-130)"  text-anchor="start" dominant-baseline="middle">B</text>
-                <line x1="-100" y1="-110" x2="-120" y2="-110" stroke="black" transform="translate(300,200)"></line> <!-- wire "C" -->
-                <text x="0" y="0" fill="black" transform="translate(300,200)translate(-100,-110)"  text-anchor="start" dominant-baseline="middle">C</text>
-                <line x1="-100" y1="-90" x2="-120" y2="-90" stroke="black" transform="translate(300,200)"></line> <!-- wire "D" -->
-                <text x="0" y="0" fill="black" transform="translate(300,200)translate(-100,-90)"  text-anchor="start" dominant-baseline="middle">D</text>
-                <line x1="-100" y1="-70" x2="-120" y2="-70" stroke="black" transform="translate(300,200)"></line> <!-- wire "E" -->
-                <text x="0" y="0" fill="black" transform="translate(300,200)translate(-100,-70)"  text-anchor="start" dominant-baseline="middle">E</text>
-                <line x1="-100" y1="-50" x2="-120" y2="-50" stroke="black" transform="translate(300,200)"></line> <!-- wire "F" -->
-                <text x="0" y="0" fill="black" transform="translate(300,200)translate(-100,-50)"  text-anchor="start" dominant-baseline="middle">F</text>      
-                <line x1="-100" y1="-30" x2="-120" y2="-30" stroke="black" transform="translate(300,200)"></line> <!-- wire "G" -->
-                <text x="0" y="0" fill="black" transform="translate(300,200)translate(-100,-30)"  text-anchor="start" dominant-baseline="middle">G</text>
-                <line x1="-100" y1="-10" x2="-120" y2="-10" stroke="black" transform="translate(300,200)"></line> <!-- wire "H"  -->
-                <text x="0" y="0" fill="black" transform="translate(300,200)translate(-100,-10)"  text-anchor="start" dominant-baseline="middle">H</text>
-                <line x1="-100" y1="10" x2="-120" y2="10" stroke="black" transform="translate(300,200)"></line> <!-- wire "K" -->
-                <text x="0" y="0" fill="black" transform="translate(300,200)translate(-100,10)"  text-anchor="start" dominant-baseline="middle">K</text>
-                <line x1="-100" y1="30" x2="-120" y2="30" stroke="black" transform="translate(300,200)"></line> <!-- wire "M" -->
-                <text x="0" y="0" fill="black" transform="translate(300,200)translate(-100,30)"  text-anchor="start" dominant-baseline="middle">M</text>
-                <line x1="-100" y1="50" x2="-120" y2="50" stroke="black" transform="translate(300,200)"></line> <!-- wire "N" -->
-                <text x="0" y="0" fill="black" transform="translate(300,200)translate(-100,50)"  text-anchor="start" dominant-baseline="middle">N</text>
-                <line x1="-100" y1="70" x2="-120" y2="70" stroke="black" transform="translate(300,200)"></line> <!-- wire "P" -->
-                <text x="0" y="0" fill="black" transform="translate(300,200)translate(-100,70)"  text-anchor="start" dominant-baseline="middle">P</text>
-                <line x1="-100" y1="90" x2="-120" y2="90" stroke="black" transform="translate(300,200)"></line> <!-- wire "U" -->
-                <text x="0" y="0" fill="black" transform="translate(300,200)translate(-100,90)"  text-anchor="start" dominant-baseline="middle">U</text>
-                <line x1="-100" y1="110" x2="-120" y2="110" stroke="black" transform="translate(300,200)"></line> <!-- wire "R" -->
-                <text x="0" y="0" fill="black" transform="translate(300,200)translate(-100,110)"  text-anchor="start" dominant-baseline="middle">R</text>
-                <line x1="-100" y1="130" x2="-120" y2="130" stroke="black" transform="translate(300,200)"></line> <!-- wire "S" -->
-                <text x="0" y="0" fill="black" transform="translate(300,200)translate(-100,130)"  text-anchor="start" dominant-baseline="middle">S</text>
-                <line x1="-100" y1="150" x2="-120" y2="150" stroke="black" transform="translate(300,200)"></line> <!-- wire "T" -->
-                <text x="0" y="0" fill="black" transform="translate(300,200)translate(-100,150)"  text-anchor="start" dominant-baseline="middle">T</text>
-                <!-- <path d="M10 -10 A10 10 180 1 0 10 10 L50 10 A 10 10 180 1 0 50 -10 L 10 -10 Z" transform="translate(300,360)" fill="yellow" stroke="gray" stroke-width="3" /> test-->
-            </g>
+            <!-- draw seg 16 start-->
+            <path led='A' d="M0 0 L10 10 L50  10 L60  0 L50  -10 L10 -10 L0 0 Z" transform="translate(300,80)rotate(180)" fill="none" stroke="gray" stroke-width="3" />
+            <!-- A led-->
+            <path led='B' d="M0 0 L10 10 L50  10 L60  0 L50  -10 L10 -10 L0 0 Z" transform="translate(300,80)" fill="none" stroke="gray" stroke-width="3" />
+            <!-- B led-->
+            <path led='C' d="M0 0 L10 10 L110 10 L120 0 L110 -10 L10 -10 L0 0 Z" transform="translate(300,80)rotate(90)translate(0,-60)" fill="none" stroke="gray" stroke-width="3" />
+            <!-- C led-->
+            <path led='D' d="M0 0 L10 10 L110 10 L120 0 L110 -10 L10 -10 L0 0 Z" transform="translate(300,200)rotate(90)translate(0,-60)" fill="none" stroke="gray" stroke-width="3" />
+            <!-- D led-->
+            <path led='E' d="M0 0 L10 10 L50  10 L60  0 L50  -10 L10 -10 L0 0 Z" transform="translate(300,320)" fill="none" stroke="gray" stroke-width="3" />
+            <!-- E led-->
+            <path led='F' d="M0 0 L10 10 L50  10 L60  0 L50  -10 L10 -10 L0 0 Z" transform="translate(300,320)rotate(180)" fill="none" stroke="gray" stroke-width="3" />
+            <!-- F led-->
+            <path led='G' d="M0 0 L10 10 L110 10 L120 0 L110 -10 L10 -10 L0 0 Z" transform="translate(300,200)rotate(90)translate(0,60)" fill="none" stroke="gray" stroke-width="3" />
+            <!-- G led-->
+            <path led='H' d="M0 0 L10 10 L110 10 L120 0 L110 -10 L10 -10 L0 0 Z" transform="translate(300,80)rotate(90)translate(0,60)" fill="none" stroke="gray" stroke-width="3" />
+            <!-- H led-->
+            <path led='K' d="M0 0 L20 10 L70 10 L90 0 L70 -10 L20 -10 L0 0 Z" transform="translate(285,185)rotate(180)rotate(70)" fill="none" stroke="gray" stroke-width="3" />
+            <!-- K led-->
+            <path led='M' d="M0 0 L10 10 L110 10 L120 0 L110 -10 L10 -10 L0 0 Z" transform="translate(300,200)rotate(-90)" fill="none" stroke="gray" stroke-width="3" />
+            <!-- M led-->
+            <path led='N' d="M0 0 L20 10 L70 10 L90 0 L70 -10 L20 -10 L0 0 Z" transform="translate(315,185)rotate(-70)" fill="none" stroke="gray" stroke-width="3" />
+            <!-- N led-->
+            <path led='P' d="M0 0 L10 10 L50  10 L60  0 L50  -10 L10 -10 L0 0 Z" transform="translate(300,200)" fill="none" stroke="gray" stroke-width="3" />
+            <!-- P led-->
+            <path led='R' d="M0 0 L20 10 L70 10 L90 0 L70 -10 L20 -10 L0 0 Z" transform="translate(315,215)rotate(70)" fill="none" stroke="gray" stroke-width="3" />
+            <!-- R led-->
+            <path led='S' d="M0 0 L10 10 L110 10 L120 0 L110 -10 L10 -10 L0 0 Z" transform="translate(300,200)rotate(90)" fill="none" stroke="gray" stroke-width="3" />
+            <!-- S led-->
+            <path led='T' d="M0 0 L20 10 L70 10 L90 0 L70 -10 L20 -10 L0 0 Z" transform="translate(285,215)rotate(180)rotate(-70)" fill="none" stroke="gray" stroke-width="3" />
+            <!-- T led-->
+            <path led='U' d="M0 0 L10 10 L50  10 L60  0 L50  -10 L10 -10 L0 0 Z" transform="translate(300,200)rotate(180)" fill="red" stroke="none" stroke-width="3" filter= 'url(#sofGlow)' />
+            <!-- U led-->
+            <!-- draw seg 16 end-->
+            <rect x="-100" y="-180" width="200" height="360" fill="none" stroke="black" transform="translate(300,200)" />
+            <!-- wireframe-->
+            <line x1="-100" y1="-150" x2="-120" y2="-150" stroke="black" transform="translate(300,200)"></line>
+            <!-- wire "A" -->
+            <text x="0" y="0" fill="black" transform="translate(300,200)translate(-100,-150)" text-anchor="start" dominant-baseline="middle">A</text>
+            <line x1="-100" y1="-130" x2="-120" y2="-130" stroke="black" transform="translate(300,200)"></line>
+            <!-- wire "B" -->
+            <text x="0" y="0" fill="black" transform="translate(300,200)translate(-100,-130)" text-anchor="start" dominant-baseline="middle">B</text>
+            <line x1="-100" y1="-110" x2="-120" y2="-110" stroke="black" transform="translate(300,200)"></line>
+            <!-- wire "C" -->
+            <text x="0" y="0" fill="black" transform="translate(300,200)translate(-100,-110)" text-anchor="start" dominant-baseline="middle">C</text>
+            <line x1="-100" y1="-90" x2="-120" y2="-90" stroke="black" transform="translate(300,200)"></line>
+            <!-- wire "D" -->
+            <text x="0" y="0" fill="black" transform="translate(300,200)translate(-100,-90)" text-anchor="start" dominant-baseline="middle">D</text>
+            <line x1="-100" y1="-70" x2="-120" y2="-70" stroke="black" transform="translate(300,200)"></line>
+            <!-- wire "E" -->
+            <text x="0" y="0" fill="black" transform="translate(300,200)translate(-100,-70)" text-anchor="start" dominant-baseline="middle">E</text>
+            <line x1="-100" y1="-50" x2="-120" y2="-50" stroke="black" transform="translate(300,200)"></line>
+            <!-- wire "F" -->
+            <text x="0" y="0" fill="black" transform="translate(300,200)translate(-100,-50)" text-anchor="start" dominant-baseline="middle">F</text>
+            <line x1="-100" y1="-30" x2="-120" y2="-30" stroke="black" transform="translate(300,200)"></line>
+            <!-- wire "G" -->
+            <text x="0" y="0" fill="black" transform="translate(300,200)translate(-100,-30)" text-anchor="start" dominant-baseline="middle">G</text>
+            <line x1="-100" y1="-10" x2="-120" y2="-10" stroke="black" transform="translate(300,200)"></line>
+            <!-- wire "H"  -->
+            <text x="0" y="0" fill="black" transform="translate(300,200)translate(-100,-10)" text-anchor="start" dominant-baseline="middle">H</text>
+            <line x1="-100" y1="10" x2="-120" y2="10" stroke="black" transform="translate(300,200)"></line>
+            <!-- wire "K" -->
+            <text x="0" y="0" fill="black" transform="translate(300,200)translate(-100,10)" text-anchor="start" dominant-baseline="middle">K</text>
+            <line x1="-100" y1="30" x2="-120" y2="30" stroke="black" transform="translate(300,200)"></line>
+            <!-- wire "M" -->
+            <text x="0" y="0" fill="black" transform="translate(300,200)translate(-100,30)" text-anchor="start" dominant-baseline="middle">M</text>
+            <line x1="-100" y1="50" x2="-120" y2="50" stroke="black" transform="translate(300,200)"></line>
+            <!-- wire "N" -->
+            <text x="0" y="0" fill="black" transform="translate(300,200)translate(-100,50)" text-anchor="start" dominant-baseline="middle">N</text>
+            <line x1="-100" y1="70" x2="-120" y2="70" stroke="black" transform="translate(300,200)"></line>
+            <!-- wire "P" -->
+            <text x="0" y="0" fill="black" transform="translate(300,200)translate(-100,70)" text-anchor="start" dominant-baseline="middle">P</text>
+            <line x1="-100" y1="90" x2="-120" y2="90" stroke="black" transform="translate(300,200)"></line>
+            <!-- wire "U" -->
+            <text x="0" y="0" fill="black" transform="translate(300,200)translate(-100,90)" text-anchor="start" dominant-baseline="middle">U</text>
+            <line x1="-100" y1="110" x2="-120" y2="110" stroke="black" transform="translate(300,200)"></line>
+            <!-- wire "R" -->
+            <text x="0" y="0" fill="black" transform="translate(300,200)translate(-100,110)" text-anchor="start" dominant-baseline="middle">R</text>
+            <line x1="-100" y1="130" x2="-120" y2="130" stroke="black" transform="translate(300,200)"></line>
+            <!-- wire "S" -->
+            <text x="0" y="0" fill="black" transform="translate(300,200)translate(-100,130)" text-anchor="start" dominant-baseline="middle">S</text>
+            <line x1="-100" y1="150" x2="-120" y2="150" stroke="black" transform="translate(300,200)"></line>
+            <!-- wire "T" -->
+            <text x="0" y="0" fill="black" transform="translate(300,200)translate(-100,150)" text-anchor="start" dominant-baseline="middle">T</text>
+        </g>
 
-        </svg>
-        <script>
-            var seg1 = document.getElementById('seg1');
-            var seg2 = seg1.cloneNode(true);
-            seg2.setAttribute("id", "seg2");
-            seg2.setAttribute("transform", "translate(150, 0)");
-            document.getElementById("svgRoot").appendChild(seg2);
-        </script>
-    </body>
+        <defs>
+                <filter id="sofGlow" height="300%" width="300%" x="-75%" y="-75%">
+                    <feMorphology operator="dilate" radius="1" in="SourceAlpha" result="thicken" />
+                    <feGaussianBlur in="thicken" stdDeviation="5" result="blurred" />
+                    <feFlood flood-color="rgb(255,0,0)" result="glowColor" />
+                    <feComposite in="glowColor" in2="blurred" operator="in" result="softGlow_colored" />
+                    <feMerge>
+                        <feMergeNode in="softGlow_colored"/>
+                        <feMergeNode in="SourceGraphic"/>
+                    </feMerge>            
+                </filter>
+            </defs>
+            
+
+
+
+    </svg>
+    <script>
+        var seg1 = document.getElementById('seg1');
+        var seg2 = seg1.cloneNode(true);
+        seg2.setAttribute("id", "seg2");
+        seg2.setAttribute("transform", "translate(150, 0)");
+        document.getElementById("svgRoot").appendChild(seg2);
+    </script>
+</body>
+
 </html>
