@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>seg16 html5 demo</title>
+    </head>
+    <body>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="600" height="400">
+            <line x1="-300" y1="0" x2="300" y2="0" transform="translate(300,200)" fill="none" stroke="blue" stroke-dasharray="5,5"/>
+            <line x1="0" y1="-200" x2="0" y2="200" transform="translate(300,200)" fill="none" stroke="blue" stroke-dasharray="5,5"/>
+            <text x="0" y="200" fill="red" transform="translate(300,200)">(0,200)</text>
+            <text x="0" y="-200" fill="red" transform="translate(300,200)" dominant-baseline="hanging">(0,-200)</text>
+            <text x="-300" y="0" fill="red" transform="translate(300,200)" >(-300,0)</text>
+            <text x="300" y="0" fill="red" transform="translate(300,200)"  text-anchor="end">(300,0)</text>
+
+            <!-- draw seg 16-->
+            <path d="M0 0 L10 10 L50  10 L60  0 L50  -10 L10 -10 L0 0 Z" transform="translate(300,200)" fill="none" stroke="gray" stroke-width="3" /><!-- middle right led-->
+            <path d="M0 0 L10 10 L50  10 L60  0 L50  -10 L10 -10 L0 0 Z" transform="translate(300,200)rotate(180)" fill="red" stroke="gray" stroke-width="3" /><!-- middle left led-->
+            <path d="M0 0 L10 10 L110 10 L120 0 L110 -10 L10 -10 L0 0 Z" transform="translate(300,200)rotate(90)" fill="red" stroke="gray" stroke-width="3" /><!-- middle down led-->
+            <path d="M0 0 L10 10 L110 10 L120 0 L110 -10 L10 -10 L0 0 Z" transform="translate(300,200)rotate(90)translate(0,60)" fill="none" stroke="gray" stroke-width="3" /><!-- left down led-->
+            <path d="M0 0 L10 10 L110 10 L120 0 L110 -10 L10 -10 L0 0 Z" transform="translate(300,200)rotate(90)translate(0,-60)" fill="none" stroke="gray" stroke-width="3" /><!-- right down led-->
+
+            <path d="M0 0 L10 10 L50  10 L60  0 L50  -10 L10 -10 L0 0 Z" transform="translate(300,320)" fill="none" stroke="gray" stroke-width="3" /><!-- right down led-->
+            <path d="M0 0 L10 10 L50  10 L60  0 L50  -10 L10 -10 L0 0 Z" transform="translate(300,320)rotate(180)" fill="none" stroke="gray" stroke-width="3" /><!-- left down led-->
+
+            <path d="M0 0 L10 10 L50  10 L60  0 L50  -10 L10 -10 L0 0 Z" transform="translate(300,80)" fill="none" stroke="gray" stroke-width="3" /><!-- right top led-->
+            <path d="M0 0 L10 10 L50  10 L60  0 L50  -10 L10 -10 L0 0 Z" transform="translate(300,80)rotate(180)" fill="none" stroke="gray" stroke-width="3" /><!-- left top led-->
+
+            <path d="M0 0 L10 10 L110 10 L120 0 L110 -10 L10 -10 L0 0 Z" transform="translate(300,80)rotate(90)translate(0,60)" fill="red" stroke="gray" stroke-width="3" /><!-- left top led-->
+            <path d="M0 0 L10 10 L110 10 L120 0 L110 -10 L10 -10 L0 0 Z" transform="translate(300,80)rotate(90)translate(0,-60)" fill="none" stroke="gray" stroke-width="3" /><!-- right top led-->
+            <path d="M0 0 L10 10 L110 10 L120 0 L110 -10 L10 -10 L0 0 Z" transform="translate(300,200)rotate(-90)" fill="red" stroke="gray" stroke-width="3" /><!-- middle top led-->
+
+            <path d="M0 0 L20 10 L70 10 L90 0 L70 -10 L20 -10 L0 0 Z" transform="translate(315,215)rotate(70)" fill="none" stroke="gray" stroke-width="3" /><!-- center-right-bottom led-->
+            <path d="M0 0 L20 10 L70 10 L90 0 L70 -10 L20 -10 L0 0 Z" transform="translate(285,215)rotate(180)rotate(-70)" fill="none" stroke="gray" stroke-width="3" /><!-- center-left-bottom led-->
+            <path d="M0 0 L20 10 L70 10 L90 0 L70 -10 L20 -10 L0 0 Z" transform="translate(315,185)rotate(-70)" fill="none" stroke="gray" stroke-width="3" /><!-- center-right-top led-->
+            <path d="M0 0 L20 10 L70 10 L90 0 L70 -10 L20 -10 L0 0 Z" transform="translate(285,185)rotate(180)rotate(70)" fill="none" stroke="gray" stroke-width="3" /><!-- center-left-top led-->
+
+
+            <path d="M10 -10 A10 10 180 1 0 10 10 L50 10 A 10 10 180 1 0 50 -10 L 10 -10 Z" transform="translate(300,360)" fill="yellow" stroke="gray" stroke-width="3" /><!-- test-->
+
+            <rect x="-100" y="-180" width="200" height="360" fill="none" stroke="black" transform="translate(300,200)" /><!-- wireframe-->
+            
+            <line x1="-100" y1="-150" x2="-120" y2="-150" stroke="black" transform="translate(300,200)"></line> <!-- wire "A" -->
+            <text x="0" y="0" fill="black" transform="translate(300,200)translate(-100,-150)"  text-anchor="start" dominant-baseline="middle">A</text>
+
+            <line x1="-100" y1="-130" x2="-120" y2="-130" stroke="black" transform="translate(300,200)"></line> <!-- wire "B" -->
+            <line x1="-100" y1="-110" x2="-120" y2="-110" stroke="black" transform="translate(300,200)"></line> <!-- wire "C" -->
+            <line x1="-100" y1="-90" x2="-120" y2="-90" stroke="black" transform="translate(300,200)"></line> <!-- wire "D" -->
+            <line x1="-100" y1="-70" x2="-120" y2="-70" stroke="black" transform="translate(300,200)"></line> <!-- wire "E" -->
+            <line x1="-100" y1="-50" x2="-120" y2="-50" stroke="black" transform="translate(300,200)"></line> <!-- wire "F" -->
+            <line x1="-100" y1="-30" x2="-120" y2="-30" stroke="black" transform="translate(300,200)"></line> <!-- wire "G" -->
+            <line x1="-100" y1="-10" x2="-120" y2="-10" stroke="black" transform="translate(300,200)"></line> <!-- wire "H"  -->
+            <line x1="-100" y1="10" x2="-120" y2="10" stroke="black" transform="translate(300,200)"></line> <!-- wire "K" -->
+            <line x1="-100" y1="30" x2="-120" y2="30" stroke="black" transform="translate(300,200)"></line> <!-- wire "M" -->
+            <line x1="-100" y1="50" x2="-120" y2="50" stroke="black" transform="translate(300,200)"></line> <!-- wire "N" -->
+            <line x1="-100" y1="70" x2="-120" y2="70" stroke="black" transform="translate(300,200)"></line> <!-- wire "P" -->
+            <line x1="-100" y1="90" x2="-120" y2="90" stroke="black" transform="translate(300,200)"></line> <!-- wire "U" -->
+            <line x1="-100" y1="110" x2="-120" y2="110" stroke="black" transform="translate(300,200)"></line> <!-- wire "R" -->
+            <line x1="-100" y1="130" x2="-120" y2="130" stroke="black" transform="translate(300,200)"></line> <!-- wire "S" -->
+            <line x1="-100" y1="150" x2="-120" y2="150" stroke="black" transform="translate(300,200)"></line> <!-- wire "T" -->
+        </svg>
+    </body>
+</html>
